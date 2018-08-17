@@ -3,31 +3,31 @@ var config = {
     mainnetExplorerUrl: "https://xmrchain.com/",
     testnetExplorerUrl: "https://testnet.xmrchain.com/",
     stagenetExplorerUrl: "http://162.210.173.150:8083/",
-    nettype: 2, /* 0 - MAINNET, 1 - TESTNET, 2 - STAGENET */
-    coinUnitPlaces: 12,
+    nettype: 0, /* 0 - MAINNET, 1 - TESTNET, 2 - STAGENET */
+    coinUnitPlaces: 2,
     txMinConfirms: 10,         // corresponds to CRYPTONOTE_DEFAULT_TX_SPENDABLE_AGE in Monero
-    txCoinbaseMinConfirms: 60, // corresponds to CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW in Monero
-    coinSymbol: 'XMR',
-    openAliasPrefix: "xmr",
-    coinName: 'Monero',
-    coinUriPrefix: 'monero:',
-    addressPrefix: 18,
-    integratedAddressPrefix: 19,
-    subAddressPrefix: 42,
+    txCoinbaseMinConfirms: 10, // corresponds to CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW in Monero
+    coinSymbol: 'XHC',
+    openAliasPrefix: "xhc",
+    coinName: 'Hashcash',
+    coinUriPrefix: 'hashcash:',
+    addressPrefix: 0x6d72,
+    integratedAddressPrefix: 0x6d73,
+    subAddressPrefix: 0x6d74,
     addressPrefixTestnet: 53,
     integratedAddressPrefixTestnet: 54,
     subAddressPrefixTestnet: 63,
     addressPrefixStagenet: 24,
     integratedAddressPrefixStagenet: 25,
     subAddressPrefixStagenet: 36,
-    feePerKB: new JSBigInt('2000000000'),//20^10 - not used anymore, as fee is dynamic.
-    dustThreshold: new JSBigInt('1000000000'),//10^10 used for choosing outputs/change - we decompose all the way down if the receiver wants now regardless of threshold
-    txChargeRatio: 0.5,
+    feePerKB: new JSBigInt('1'), //20^10 - not used anymore, as fee is dynamic.
+    dustThreshold: new JSBigInt('1'), //10^10 used for choosing outputs/change - we decompose all the way down if the receiver wants now regardless of threshold
+    txChargeRatio: 0,
     defaultMixin: 6, // minimum mixin for hardfork v7 is 6 (ring size 7)
     txChargeAddress: '',
     idleTimeout: 30,
     idleWarningDuration: 20,
-    maxBlockNumber: 500000000,
-    avgBlockTime: 120,
+    maxBlockNumber: 500000000000,
+    avgBlockTime: 600,
     debugMode: false
 };

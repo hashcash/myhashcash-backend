@@ -32,7 +32,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `Accounts`;
 CREATE TABLE IF NOT EXISTS `Accounts` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `address` varchar(95) NOT NULL,
+  `address` varchar(98) NOT NULL,
   `viewkey_hash` char(64) NOT NULL,
   `scanned_block_height` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `scanned_block_timestamp` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `Payments` (
   `tx_hash` varchar(64) NOT NULL DEFAULT '',
   `request_fulfilled` tinyint(1) NOT NULL DEFAULT '0',
   `import_fee` bigint(20) NOT NULL,
-  `payment_address` varchar(95) NOT NULL,
+  `payment_address` varchar(98) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
